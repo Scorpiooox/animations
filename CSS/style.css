@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;700&display=swap');
+html {
+    background-color: rgb(11, 0, 77);
+    font-family: 'Readex Pro', sans-serif;
+}
+
+h1 {
+    color: rgb(248, 215, 215);
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 1rem;
+}
+/* About the balls */
+.about-container {
+    display: inline-flex;
+    padding-inline: 20%;
+    margin-top: 3rem;
+    color: rgb(248, 215, 215);
+}
+.about {
+    text-align: center;
+    padding-inline: 1rem;
+    animation: slidein 3s;
+}
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+.about h4 {
+    color: skyblue;
+    font-size: 1.5rem;
+}
+.about p {
+    padding-top: 1rem;
+    line-height: 1.3rem;
+}
+
+/* loading symbol */
+.loading-container {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+.loading {
+    display: block;
+    margin: 20px auto;
+    height: 1rem;
+    width: 1rem;
+    background: 
+                linear-gradient(0deg, #8490c6 1px, transparent 0, transparent 15px, #8490c6 15px),
+                linear-gradient(90deg, #8490c6 1px, #aeb5da 0, #aeb5da 3px, #8490c6 3px),
+
+                linear-gradient(0deg, #ececf5 1px, transparent 0, transparent 8px, #ececf5 8px),  
+                linear-gradient(90deg, #ececf5 1px, #f2f3f9 0, #f2f3f9 3px, #ececf5 3px),
+
+                linear-gradient(0deg, #e7eaf4 1px, transparent 0, transparent 8px, #e7eaf4 8px), 
+                linear-gradient(90deg, #e7eaf4 1px, #eef1f8 0, #eef1f8 3px, #e7eaf4 3px),
+
+                linear-gradient(0deg, #b9bedd 1px, transparent 0, transparent 10px, #b9bedd 10px), 
+                linear-gradient(90deg, #b9bedd 1px, #d0d5e8 0, #d0d5e8 3px, #b9bedd 3px),
+
+                linear-gradient(0deg, #9fa6d2 1px, transparent 0, transparent 15px, #9fa6d2 15px),
+                linear-gradient(90deg, #9fa6d2 1px, #c0c5e1 0, #c0c5e1 3px, #9fa6d2 3px),
+
+                linear-gradient(0deg, #8490c6 1px, transparent 0, transparent 15px, #8490c6 15px), 
+                linear-gradient(90deg, #8490c6 1px, #aeb5da 0, #aeb5da 3px, #8490c6 3px); 
+    
+    background-repeat: no-repeat;
+
+    background-size: 4px 9px, 4px 9px, 4px 9px, 4px 9px, 4px 9px, 4px 9px, 4px 11px, 4px 11px, 4px 16px,
+                    4px 16px, 4px 16px, 4px 16px;
+
+    background-position-x: -4px;
+    background-position-y: 3px, 3px, 3px, 3px, 3px, 3px, 2px, 2px, 0, 0, 0, 0;
+    
+    animation: wait .80s steps(1, start) infinite;
+}
+
+@keyframes wait {
+    12.5% {
+      background-position-x: -4px,-4px,   -4px, -4px,  -4px,-4px,
+                             -4px,-4px,   -4px, -4px,   0,   0;
+    }
+    25% {
+      background-position-x: -4px, -4px,  -4px, -4px,  -4px,-4px,
+                             -4px, -4px,   0,    0,     6px, 6px;
+    }
+    37.5% {
+      background-position-x: -4px, -4px,  -4px, -4px,  -4px, -4px,
+                              0,    0,     6px,  6px,  12px, 12px;
+    }
+    50%{
+      background-position-x: -4px, -4px,  -4px, -4px,   0,    0,
+                              6px,  6px,  12px, 12px,  -4px, -4px;
+    }
+    62.5% {
+      background-position-x: -4px, -4px,   0,    0,     6px,  6px,
+                             12px, 12px,  -4px, -4px,  -4px, -4px;
+    }
+    75% {
+      background-position-x:  0,    0,     6px,  6px,  12px, 12px,
+                             -4px, -4px,  -4px, -4px,  -4px, -4px;
+    }
+    87.5%{
+      background-position-x:  6px,  6px,  12px, 12px,  -4px, -4px,
+                             -4px, -4px,  -4px, -4px,  -4px, -4px;
+    }
+    100% {
+      background-position-x: 12px, 12px,  -4px, -4px,  -4px, -4px,
+                             -4px, -4px,  -4px, -4px,  -4px, -4px;
+    }
+  }
+
+/* Moving Square */
+.square-container {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    margin-inline: 5%;
+    width: 1320px;
+    
+}
+.square {
+    background-color: slategrey;
+    width: 100px;
+    height: 80px;
+    background-image: linear-gradient(90deg, blue, blue);
+        background-size: 40px 40px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+
+        animation: move 1s steps(1, start) infinite;
+}
+@keyframes move {
+    16.6% {
+        background-position: 0 0;
+    }
+    33.2% {
+        background-position: 30px 0;
+    }
+    49.8% {
+        background-position: 60px 0px;
+    }
+    66.4% {
+        background-position: 60px 40px;
+    }
+    83% {
+        background-position: 30px 40px;
+    }
+    99% {
+        background-position: 0 40px;
+    }
+}
+
+
+/* ball sections */
+
+.ball-container {
+    height: 350px;
+    width: 100%;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.ball {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+.one {
+    background-color: salmon;
+    transition: transform 1s;
+}
+.one:hover {
+    transform: scale(0.5);
+    background-color: rgb(3, 145, 27);
+}
+.two {
+    background-color: yellow;
+    transition: ease 2s;
+}
+.two:hover {
+    transform: translate(0px, -200px)
+}
+.three {
+    background-color: violet;
+    transition: transform 1s;
+}
+.three:hover {
+    transform: skew(70deg, -40deg);
+    margin-bottom: 20px;
+}
+.four {
+    background-color:skyblue;
+    border-radius: 2% 50% 50% 50%;
+    transition: ease-in-out 3s;
+}
+.four:hover {
+    transform: rotate(1080deg);
+}
+.five {
+    background-color: orangered;
+    transition: transform 2s;
+    transform-origin: right;
+}
+.five:hover {
+    transform: rotate(90deg) scale(3) translateY(70%) translateX(-50%);
+}
+.platform {
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(90deg, rgb(231, 7, 212), rgb(36, 49, 228));
+}
+
